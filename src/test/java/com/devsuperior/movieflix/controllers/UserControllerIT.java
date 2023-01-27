@@ -54,8 +54,8 @@ public class UserControllerIT {
 		
 		result.andExpect(status().isOk());
 		result.andExpect(jsonPath("$.id").isNotEmpty());
-		result.andExpect(jsonPath("$.name").isNotEmpty());
 		result.andExpect(jsonPath("$.email").value(visitorUsername));
+		result.andExpect(jsonPath("$.name").isNotEmpty());
 	}
 
 	@Test
@@ -70,8 +70,8 @@ public class UserControllerIT {
 		
 		result.andExpect(status().isOk());
 		result.andExpect(jsonPath("$.id").isNotEmpty());
-		result.andExpect(jsonPath("$.name").isNotEmpty());
 		result.andExpect(jsonPath("$.email").value(memberUsername));
+		result.andExpect(jsonPath("$.name").isNotEmpty());
 	}
 
 	@Test
